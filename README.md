@@ -33,10 +33,11 @@ It helps students automatically create personalized study or college timetables 
 edubuddy/
 │
 ├── frontend/
-│   └── index.html         # Main frontend page
+│   └── index.html        # Main frontend page
+│   └── style.css
 │
 ├── backend/
-│   └── server.js          # Express + SQLite backend
+│   └── script.js          # Express + SQLite backend
 │   └── edubuddy.db        # SQLite database (auto-created)
 │
 └── README.md              # Project documentation
@@ -48,68 +49,19 @@ edubuddy/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/edubuddy.git
+git clone https://github.com/mandeepsingh2005/edubuddy.git
 cd edubuddy/backend
 ```
 
 ### 2️⃣ Install dependencies
 ```bash
 npm init -y
-npm install express cors sqlite3 sqlite
+npm install electron-builder
 ```
 
 ### 3️⃣ Run the backend server
 ```bash
 node server.js
-```
-Backend will run at:  
-👉 `http://localhost:5000`
-
-### 4️⃣ Open the frontend
-- Open `frontend/index.html` in your browser.
-- Fill in subjects, days, hours, etc.
-- Click **Generate Timetable** → it will fetch results from backend.
-
----
-
-## 📡 API Endpoints
-### `POST /api/register`
-Registers a new user.  
-**Body:**
-```json
-{ "username": "test", "password": "1234" }
-```
-
-### `POST /api/login`
-Logs in a user.  
-**Body:**
-```json
-{ "username": "test", "password": "1234" }
-```
-
-### `POST /api/generate-timetable`
-Generates and saves a timetable.  
-**Body:**
-```json
-{
-  "userId": 1,
-  "inCollege": true,
-  "subjects": ["Math", "Physics", "CS"],
-  "values": [4, 3, 5],
-  "days": 5,
-  "hours": 6
-}
-```
-
-**Response:**
-```json
-{
-  "timetable": {
-    "Day 1": ["Math: 2 hr(s)", "Physics: 2 hr(s)", "CS: 2 hr(s)"],
-    "Day 2": ["Math: 2 hr(s)", "CS: 4 hr(s)"]
-  }
-}
-```
 
 ---
 
