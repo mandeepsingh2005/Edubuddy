@@ -24,7 +24,6 @@ It helps students automatically create personalized study or college timetables 
 ### Backend
 - Node.js
 - Express.js
-- SQLite (with `sqlite3` + `sqlite` npm packages)
 
 ---
 
